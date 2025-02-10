@@ -38,7 +38,7 @@ jobs:
       - name: Fetch the update the latest image tag
         id: get-latest-tag
         run: |
-          repository="hussain2844/webapp"
+          repository="hussain2844/DevOps-intern"
           tags_info=$(curl -s "https://registry.hub.docker.com/v2/repositories/$repository/tags/" | jq -r '.results[] | "\(.name) \(.last_updated)"')
           sorted_tags_info=$(echo "$tags_info" | sort -k2)
           latest_tag_info=$(echo "$sorted_tags_info" | tail -n 1)
