@@ -18,7 +18,7 @@ jobs:
 
       - name: Build the Docker image
         run: |
-          docker build -t ${{ secrets.DHNAME }}/webapp:${{ steps.timestamp.outputs.timestamp}} -f Dockerfile .
+          docker build -t ${{ secrets.DHNAME }}/DevOps-intern:${{ steps.timestamp.outputs.timestamp}} -f Dockerfile .
         shell: bash
 
       - name: Login to Docker Hub
@@ -28,7 +28,7 @@ jobs:
           password: ${{ secrets.DHPASSWORD }}
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DHNAME }}/webapp:${{ steps.timestamp.outputs.timestamp}}
+        run: docker push ${{ secrets.DHNAME }}/DevOps-intern:${{ steps.timestamp.outputs.timestamp}}
         
       - name: Sleep for 10 seconds
         uses: jakejarvis/wait-action@master
