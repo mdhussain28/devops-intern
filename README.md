@@ -2,62 +2,367 @@
 ## v1 Blue
 ```
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Welcome to EyesOnCloud Test Web Server App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenCommerce - Online Shopping</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        body {
-            background-color: #1E90FF;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        * {
             margin: 0;
-            color: black;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
+        body {
+            background-color: #e3f2fd; /* Pale blue */
+        }
+
+        header {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745; /* Green */
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .cart-icon {
+            font-size: 20px;
+            color: #28a745; /* Green */
+            cursor: pointer;
+        }
+
+        .hero {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #212529;
+        }
+
+        .hero p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #28a745; /* Green */
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .products {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .product-image {
+            background-color: #eee;
+            height: 200px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .product-card button {
+            background-color: #28a745; /* Green */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to EyesOnCloud Test Web Server App</h1>
-    <p>This is a test web server application.</p>
-    <img src="https://github.com/EyesOnCloud/webapp/raw/main/EOC%20logo.png" alt="EOC Logo">
+    <header>
+        <nav>
+            <a href="/" class="logo">GreenCommerce</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#cart"><i class="fas fa-shopping-cart cart-icon"></i> Cart</a></li> <!-- Cart added here -->
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to GreenCommerce</h1>
+            <p>Discover amazing products at great prices</p>
+            <a href="#shop" class="cta-button">Shop Now</a>
+        </section>
+
+        <section class="products">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <h3>Product 1</h3>
+                    <p>$99.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <h3>Product 2</h3>
+                    <p>$149.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <h3>Product 3</h3>
+                    <p>$79.99</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 GreenCommerce. All rights reserved.</p>
+    </footer>
 </body>
 </html>
+
 ```
 ## v2 Green
 ```
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Welcome to EyesOnCloud Test Web Server App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenCommerce - Online Shopping</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        body {
-            background-color: #ADFF2F;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        * {
             margin: 0;
-            color: black;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
+        body {
+            background-color: #e3f2fd; /* Pale blue */
+        }
+
+        header {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745; /* Green */
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .cart-icon {
+            font-size: 20px;
+            color: #28a745; /* Green */
+            cursor: pointer;
+        }
+
+        .hero {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #212529;
+        }
+
+        .hero p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #28a745; /* Green */
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .products {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .product-image {
+            background-color: #eee;
+            height: 200px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .product-card button {
+            background-color: #28a745; /* Green */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to EyesOnCloud Test Web Server App</h1>
-    <p>This is a test web server application.</p>
-    <img src="https://github.com/EyesOnCloud/webapp/raw/main/EOC%20logo.png" alt="EOC Logo">
+    <header>
+        <nav>
+            <a href="/" class="logo">GreenCommerce</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#cart"><i class="fas fa-shopping-cart cart-icon"></i> Cart</a></li> <!-- Cart added here -->
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to GreenCommerce</h1>
+            <p>Discover amazing products at great prices</p>
+            <a href="#shop" class="cta-button">Shop Now</a>
+        </section>
+
+        <section class="products">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <h3>Product 1</h3>
+                    <p>$99.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <h3>Product 2</h3>
+                    <p>$149.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <h3>Product 3</h3>
+                    <p>$79.99</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 GreenCommerce. All rights reserved.</p>
+    </footer>
 </body>
 </html>
 ```
