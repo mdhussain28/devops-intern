@@ -18,7 +18,7 @@ jobs:
 
       - name: Build the Docker image
         run: |
-          docker build -t ${{ secrets.DHNAME }}/DevOps-intern:${{ steps.timestamp.outputs.timestamp}} -f Dockerfile .
+          docker build -t ${{ secrets.DHNAME }}/devops-intern:${{ steps.timestamp.outputs.timestamp}} -f Dockerfile .
         shell: bash
 
       - name: Login to Docker Hub
@@ -28,7 +28,7 @@ jobs:
           password: ${{ secrets.DHPASSWORD }}
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DHNAME }}/DevOps-intern:${{ steps.timestamp.outputs.timestamp}}
+        run: docker push ${{ secrets.DHNAME }}/devops-intern:${{ steps.timestamp.outputs.timestamp}}
         
       - name: Sleep for 10 seconds
         uses: jakejarvis/wait-action@master
@@ -38,7 +38,7 @@ jobs:
       - name: Fetch the update the latest image tag
         id: get-latest-tag
         run: |
-          repository="hussain2844/DevOps-intern"
+          repository="hussain2844/devops-intern"
           tags_info=$(curl -s "https://registry.hub.docker.com/v2/repositories/$repository/tags/" | jq -r '.results[] | "\(.name) \(.last_updated)"')
           sorted_tags_info=$(echo "$tags_info" | sort -k2)
           latest_tag_info=$(echo "$sorted_tags_info" | tail -n 1)
