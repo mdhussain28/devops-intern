@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenCommerce - Online Shopping</title>
+    <title>BlueCommerce - Online Shopping</title>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         * {
@@ -29,7 +29,7 @@
         .logo {
             font-size: 24px;
             font-weight: bold;
-            color: #28a745; /* Green */
+            color: #007bff; /* Blue */
             text-decoration: none;
         }
 
@@ -54,12 +54,6 @@
             font-weight: 500;
         }
 
-        .cart-icon {
-            font-size: 20px;
-            color: #28a745; /* Green */
-            cursor: pointer;
-        }
-
         .hero {
             background-color: #f8f9fa;
             text-align: center;
@@ -78,7 +72,7 @@
         }
 
         .cta-button {
-            background-color: #28a745; /* Green */
+            background-color: #007bff; /* Blue */
             color: white;
             padding: 15px 30px;
             border-radius: 5px;
@@ -114,7 +108,7 @@
         }
 
         .product-card button {
-            background-color: #28a745; /* Green */
+            background-color: #007bff; /* Blue */
             color: white;
             border: none;
             padding: 10px 15px;
@@ -133,11 +127,10 @@
 <body>
     <header>
         <nav>
-            <a href="/" class="logo">GreenCommerce</a>
+            <a href="/" class="logo">BlueCommerce</a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#shop">Shop</a></li>
-                <li><a href="#cart"><i class="fas fa-shopping-cart cart-icon"></i> Cart</a></li> <!-- Cart added here -->
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -146,7 +139,7 @@
 
     <main>
         <section class="hero">
-            <h1>Welcome to GreenCommerce</h1>
+            <h1>Welcome to BlueCommerce</h1>
             <p>Discover amazing products at great prices</p>
             <a href="#shop" class="cta-button">Shop Now</a>
         </section>
@@ -177,7 +170,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2023 GreenCommerce. All rights reserved.</p>
+        <p>&copy; 2023 BlueCommerce. All rights reserved.</p>
     </footer>
 </body>
 </html>
