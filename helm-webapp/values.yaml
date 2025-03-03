@@ -7,4 +7,4 @@ configmap:
 
 image:
   name: hussain2844/devops-intern
-  tag: 37
+  tag: 49
