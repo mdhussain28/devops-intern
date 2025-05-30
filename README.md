@@ -1,3 +1,33 @@
+# DevOps CI/CD Pipeline with GitHub Actions, Docker, Kubernetes, and Argo CD
+
+This project demonstrates a complete CI/CD pipeline setup using **GitHub Actions** for CI and **Argo CD** for CD. It builds a Docker image from the application source code, pushes it to a container registry, and deploys the image to a Kubernetes cluster using Argo CD.
+
+---
+
+## 🚀 Workflow Overview
+
+### Continuous Integration (CI) - GitHub Actions
+- Triggers on every push to the `main` branch (or a specific branch).
+- Builds the Docker image.
+- Pushes the image to Docker Hub (or any specified container registry).
+- Updates the Kubernetes manifest (optional).
+
+### Continuous Deployment (CD) - Argo CD
+- Watches the Git repository for changes in Kubernetes manifests.
+- Automatically syncs the changes and deploys to the Kubernetes cluster.
+
+---
+
+## 🔧 Technologies Used
+
+- **GitHub Actions** - for CI workflows
+- **Docker** - to containerize the application
+- **Docker Hub** - as a container image registry
+- **Kubernetes** - to run the application pods
+- **Argo CD** - for GitOps-based continuous delivery
+
+---
+
 # index.html file 
 ## v1 Blue
 ```
