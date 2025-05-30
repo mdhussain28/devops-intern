@@ -1,180 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenCommerce - Online Shopping</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #e3f2fd; /* Pale blue */
-        }
-
-        header {
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #28a745; /* Green */
-            text-decoration: none;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-        }
-
-        .cart-icon {
-            font-size: 20px;
-            color: #28a745; /* Green */
-            cursor: pointer;
-        }
-
-        .hero {
-            background-color: #f8f9fa;
-            text-align: center;
-            padding: 100px 20px;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: #212529;
-        }
-
-        .hero p {
-            color: #666;
-            margin-bottom: 30px;
-        }
-
-        .cta-button {
-            background-color: #28a745; /* Green */
-            color: white;
-            padding: 15px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .products {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .product-card {
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .product-image {
-            background-color: #eee;
-            height: 200px;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-
-        .product-card button {
-            background-color: #28a745; /* Green */
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        footer {
-            background-color: #f8f9fa;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 50px;
-        }
-    </style>
+    <title>Face Recognition Attendance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <nav>
-            <a href="/" class="logo">GreenCommerce</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#cart"><i class="fas fa-shopping-cart cart-icon"></i> Cart</a></li> <!-- Cart added here -->
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="hero">
-            <h1>Welcome to GreenCommerce</h1>
-            <p>Discover amazing products at great prices</p>
-            <a href="#shop" class="cta-button">Shop Now</a>
-        </section>
+<body class="bg-gradient-to-r from-[#141e30] to-[#243b55] min-h-screen flex flex-col items-center justify-center p-8">
 
-        <section class="products">
-            <h2>Featured Products</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3>Product 1</h3>
-                    <p>$99.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3>Product 2</h3>
-                    <p>$149.99</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3>Product 3</h3>
-                    <p>$79.99</p>
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-        </section>
-    </main>
+    <h1 class="text-4xl font-bold text-white mb-6">Face Recognition Attendance System</h1>
 
-    <footer>
-        <p>&copy; 2023 GreenCommerce. All rights reserved.</p>
-    </footer>
+    <h3 class="text-lg text-gray-300 mb-8">{{ today }} | <span id="clock" class="text-yellow-400"></span></h3>
+
+    <button id="login-btn" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-xl mb-8">Login</button>
+
+    <div id="login-section" class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-lg w-full max-w-md hidden">
+        <h2 class="text-2xl text-white mb-6">Login</h2>
+        <input type="text" placeholder="Username" class="w-full p-2 mb-4 rounded-md" id="username">
+        <input type="password" placeholder="Password" class="w-full p-2 mb-6 rounded-md" id="password">
+        <button id="submit-login" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-xl w-full">Submit</button>
+    </div>
+
+    <div id="attendance-section" class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-lg w-full max-w-5xl hidden">
+        <h2 class="text-2xl text-white mb-6">Today's Attendance</h2>
+
+        <a href="/video_feed" class="block text-center mb-6">
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-xl">Take Attendance ✅</button>
+        </a>
+
+        <table class="w-full text-white text-center border-collapse mb-8">
+            <tr class="bg-white/20">
+                <th class="py-2">S No</th>
+                <th>Name</th>
+                <th>Roll No</th>
+                <th>Time</th>
+            </tr>
+            {% if l %}
+            {% for user in userDetails %}
+            <tr class="bg-white/10">
+                <td>{{ loop.index }}</td>
+                <td>{{ user[0] }}</td>
+                <td>{{ user[1] }}</td>
+                <td>{{ user[2] }}</td>
+            </tr>
+            {% endfor %}
+            {% endif %}
+        </table>
+
+        <h2 class="text-2xl text-white mb-6">Add New User</h2>
+        <form action='/add_user' method="POST" enctype="multipart/form-data" class="flex flex-col items-center gap-4">
+            <input type="text" placeholder="Enter New User Name" class="w-full p-2 rounded-md" name='newusername' required>
+            <input type="text" placeholder="Enter New Roll No" class="w-full p-2 rounded-md" name='newrollno' required>
+            <input type="text" placeholder="Enter Mobile No" class="w-full p-2 rounded-md" name="phone" pattern="[0-9]{10}" required>
+            <input type="text" placeholder="Enter Email" class="w-full p-2 rounded-md" name='email' required>
+            <button class="bg-dark-500 hover:bg-dark-600 text-white font-bold py-3 px-8 rounded-xl w-full" type='submit'>Add New User</button>
+        </form>
+        <h5 class="text-white mt-6"><i>Total Users in Database: {{totalreg}}</i></h5>
+    </div>
+
+    <script>
+        const clockElement = document.getElementById('clock');
+        const loginBtn = document.getElementById('login-btn');
+        const loginSection = document.getElementById('login-section');
+        const attendanceSection = document.getElementById('attendance-section');
+        const submitLogin = document.getElementById('submit-login');
+
+        function clock() {
+            const now = new Date();
+            clockElement.textContent = now.toTimeString().slice(0, 8);
+        }
+
+        setInterval(clock, 1000);
+
+                /* 1st login button logic */
+                loginBtn.addEventListener('click', () => {
+            loginSection.classList.remove('hidden');
+            loginBtn.classList.add('hidden');
+        });
+
+        /* main login button logic */
+        submitLogin.addEventListener('click', () => {
+            loginSection.classList.add('hidden');
+            attendanceSection.classList.remove('hidden');
+        });
+/*         loginBtn.addEventListener('click', () => {
+            loginSection.classList.remove('hidden');
+            loginBtn.classList.add('hidden');
+        }); */
+
+/*         submitLogin.addEventListener('click', async () => {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const response = await fetch('/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password })
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                loginSection.classList.add('hidden');
+                attendanceSection.classList.remove('hidden');
+            } else {
+                alert('Invalid credentials');
+            }
+        }); */
+    </script>
+
 </body>
+
 </html>
